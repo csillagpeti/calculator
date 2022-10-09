@@ -2,6 +2,10 @@ body {
     background-color: aqua;
 }
 
+#calcContainer{
+    max-width: fit-content;
+}
+
 button {
    width: 3em;
    height: 2em;
@@ -10,4 +14,22 @@ button {
 
 .nullButton{
     width: 6.3em;
+}
+
+#displayValue{
+    text-align: right;
+}
+
+#currentSum{
+    text-align: right;
+    font-size: smaller;
+    font-weight: lighter;
+    opacity: 50%;
+}
+
+#displayContainer{
+    border-style: solid;
+    margin-bottom: 0.5em;
+    margin-top: 0.5em;
+    padding-right: 0.2em;
 }

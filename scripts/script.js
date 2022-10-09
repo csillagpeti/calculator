@@ -1,20 +1,20 @@
 const currentSum = 0;
+const currentSumLabel = document.getElementById("currentSum");
+currentSumLabel.textContent = currentSum;
 const currentOperator = "";
 const displayValue = 0;
+const displayValueLabel = document.getElementById("displayValue");
+displayValueLabel.textContent = displayValue;
 const operate = (operator, a, b) => {
     switch (operator) {
         case "add":
-            add(a, b);
-            break;
+            return add(a, b);
         case "subtract":
-            add(a, b);
-            break;
+            return subtract(a, b);
         case "multiply":
-            add(a, b);
-            break;
+            multiply(a, b);
         case "divide":
-            add(a, b);
-            break;
+            return divide(a, b);
     }
 }
 operate(1, 2, 3);
