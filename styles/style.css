@@ -1,0 +1,13 @@
+body {
+    background-color: aqua;
+}
+
+button {
+   width: 3em;
+   height: 2em;
+   margin-bottom: 0.2em;
+}
+
+.nullButton{
+    width: 6.3em;
+}
