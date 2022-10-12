@@ -6,20 +6,24 @@ let operatorMemory = "";
 const displayValueLabel = document.getElementById("displayValue");
 displayValueLabel.textContent = displayValue;
 const operate = (operator, a, b) => {
-    console.log (operator, a, b);
+    console.log(operator, a, b);
     switch (operator) {
         case "+":
-            return a+b;
+            return a + b;
         case "-":
-            return a-b;
+            return a - b;
         case "X":
-            return a*b;
+            return a * b;
         case "/":
-            return a/b;
+            return a / b;
+        case "%":
+            return a % b;
+        case "+/-":
+            return -a;
     }
 }
 
-const clearAll = function(){
+const clearAll = function () {
     resetDisplayValue();
     currentSum = 0;
     currentSumLabel.textContent = currentSum;
@@ -33,7 +37,7 @@ const updateDisplay = function (buttonPressed, buttonType) {
         displayValueLabel.textContent = displayValue;
     }
     if (buttonType == "operatorButton" && (buttonPressed != "=")) {
-          if (buttonPressed == "C"){clearAll();return 0;};
+        if (buttonPressed == "AC") { clearAll(); return 0; };
         if (operatorMemory.length == 0) {
             currentSum = displayValue + buttonPressed;
             currentSumLabel.textContent = currentSum;
@@ -49,9 +53,10 @@ const updateDisplay = function (buttonPressed, buttonType) {
             operatorMemory = buttonPressed;
         }
     }
-    if (buttonPressed == "="){
-        if (operatorMemory != ""){
-        displayValue = operate(operatorMemory, parseFloat(currentSum), parseFloat(displayValue));}
+    if (buttonPressed == "=") {
+        if (operatorMemory != "") {
+            displayValue = operate(operatorMemory, parseFloat(currentSum), parseFloat(displayValue));
+        }
         displayValueLabel.textContent = displayValue;
         currentSum = displayValue;
         currentSumLabel.textContent = currentSum;
@@ -65,7 +70,7 @@ const multiply = (a, b) => a * b;
 const divide = (a, b) => a / b;
 
 
-const forwardNum = function () {updateDisplay(this.textContent, this.classList[1])};
+const forwardNum = function () { updateDisplay(this.textContent, this.classList[1]) };
 
 const buttons = document.querySelectorAll(".button");
 
@@ -73,7 +78,7 @@ for (let i = 0; i < buttons.length; i++) {
     buttons[i].addEventListener("click", forwardNum);
 }
 
-const resetDisplayValue = function(){
+const resetDisplayValue = function () {
     displayValue = 0;
     displayValueLabel.textContent = displayValue;
 }
