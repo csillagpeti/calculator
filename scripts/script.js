@@ -50,7 +50,7 @@ const updateDisplay = function (buttonPressed, buttonType) {
             currentSumLabel.textContent = currentSum;
             resetDisplayValue();
             //operatorMemory = "";
-            operatorMemory = buttonPressed;
+            operatorMemory = buttonPressed; 
         }
     }
     if (buttonPressed == "=") {
