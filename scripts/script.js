@@ -18,7 +18,7 @@ const operate = (operator, a, b) => {
             return a / b;
         case "%":
             return a % b;
-        case "+/-":
+        case "±":
             return -a;
     }
 }
