@@ -1,13 +1,13 @@
 body {
     background-color: aqua;
     font-family: 'Orbitron', sans-serif;
-    width: 100%;
+
 }
 
 #header{
     text-align: center;
     margin-top: 10vh;
-    font-size: xx-large;
+    font-size: 32px;
 }
 
 #content{
@@ -15,20 +15,32 @@ body {
     justify-content: center;
 }
 
+#leftSideBar, #rightSideBar{
+    flex-basis: auto;
+    background-color: blue;
+}
+
 #calcContainer{
-    max-width: fit-content;
-    min-width: 550px;
+    flex:auto;
+    width: fit-content;
+    justify-content: center;
+    max-width: 550px;
 }
 
 #displayContainer{
     font-family: 'Orbitron', sans-serif;
 }
 
+#buttonRow{
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+}
+
 button {
-   width: 24.4%;
+   width: 23.8%;
    height: 20%;
    margin-bottom: 5%;
-   font-size: 55px;
+   font-size: 50px;
    text-align: center;
    font-family: 'Orbitron', sans-serif;
 }
