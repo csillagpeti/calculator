@@ -24,7 +24,8 @@ body {
     flex:auto;
     width: fit-content;
     justify-content: center;
-    max-width: 550px;}
+    max-width: 550px;
+    min-width: 300px;}
 
 #displayContainer{
     font-family: 'Orbitron', sans-serif;
@@ -42,6 +43,7 @@ button {
    margin-right: -1%;
    font-size: 50px;
    font-family: 'Orbitron', sans-serif;
+   padding:0;
 }
 
 
